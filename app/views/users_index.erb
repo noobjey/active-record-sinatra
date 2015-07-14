@@ -1,0 +1,22 @@
+<div id="users">
+
+  <% @users.each do |user| %>
+
+    <h2>First Name: <%= user.first %></h2>
+
+    <h2>Last Name: <%= user.last %></h2>
+
+    <ul>
+      <% user.tasks.each do |task| %>
+        <li>
+          <h3>Status: <%= task.status.name %></h3>
+          <h2>Task Title: <%= task.title %></h2>
+
+          <p>Task Description: <%= task.description %></p>
+        </li>
+      <% end %>
+    </ul>
+
+  <% end %>
+
+</div>

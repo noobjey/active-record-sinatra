@@ -1,0 +1,12 @@
+<h1>Status</h1>
+
+<% @statuses.each do |status| %>
+  <ul>
+    <li>Status Name: <%= status.name %></li>
+    <ul>
+      <% status.tasks.each do |task| %>
+        <li><%= task.title %></li>
+      <% end %>
+    </ul>
+  </ul>
+<% end %>
